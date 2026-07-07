@@ -1,0 +1,80 @@
+<svg width="700" height="500" viewBox="0 0 700 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#400505" />
+      <stop offset="100%" stop-color="#1a0202" />
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7ee081" />
+      <stop offset="100%" stop-color="#2f8f4e" />
+    </linearGradient>
+    <linearGradient id="barGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#404df7" />
+      <stop offset="100%" stop-color="#8892ff" />
+    </linearGradient>
+  </defs>
+
+  <rect width="700" height="500" fill="url(#bgGrad)" />
+
+  <!-- subtle grid -->
+  <g stroke="#ffffff10" stroke-width="1">
+    <line x1="0" y1="125" x2="700" y2="125" />
+    <line x1="0" y1="250" x2="700" y2="250" />
+    <line x1="0" y1="375" x2="700" y2="375" />
+    <line x1="175" y1="0" x2="175" y2="500" />
+    <line x1="350" y1="0" x2="350" y2="500" />
+    <line x1="525" y1="0" x2="525" y2="500" />
+  </g>
+
+  <!-- sun -->
+  <circle cx="590" cy="100" r="42" fill="#ffd479" opacity="0.9" />
+  <g stroke="#ffd479" stroke-width="4" opacity="0.7">
+    <line x1="590" y1="30" x2="590" y2="10" />
+    <line x1="650" y1="60" x2="665" y2="48" />
+    <line x1="660" y1="100" x2="682" y2="100" />
+  </g>
+
+  <!-- leaf / plant -->
+  <g transform="translate(120,300)">
+    <path d="M0 120 C -10 40, 40 -30, 120 -40 C 110 20, 80 90, 0 120 Z" fill="url(#leafGrad)" />
+    <path d="M0 120 C -6 60, 40 0, 100 -25" stroke="#1d5c34" stroke-width="3" fill="none" opacity="0.6" />
+    <path d="M60 120 C 50 40, 100 -10, 165 -20 C 155 40, 130 100, 60 120 Z" fill="#5cc26a" />
+    <path d="M60 120 C 65 70, 100 20, 150 -5" stroke="#1d5c34" stroke-width="3" fill="none" opacity="0.5" />
+  </g>
+
+  <!-- circuit / AI nodes overlaying the plant -->
+  <g stroke="#404df7" stroke-width="2" fill="none" opacity="0.85">
+    <path d="M120 420 L120 300 L220 260 L220 180" />
+    <path d="M220 260 L300 300 L300 380" />
+    <path d="M220 180 L300 150" />
+  </g>
+  <g fill="#8892ff">
+    <circle cx="120" cy="300" r="6" />
+    <circle cx="220" cy="260" r="6" />
+    <circle cx="220" cy="180" r="6" />
+    <circle cx="300" cy="300" r="6" />
+    <circle cx="300" cy="150" r="6" />
+    <circle cx="300" cy="380" r="6" />
+  </g>
+
+  <!-- data / market bars representing yield & price prediction -->
+  <g transform="translate(420,420)">
+    <rect x="0" y="-60" width="30" height="60" rx="4" fill="url(#barGrad)" />
+    <rect x="45" y="-100" width="30" height="100" rx="4" fill="url(#barGrad)" />
+    <rect x="90" y="-40" width="30" height="40" rx="4" fill="url(#barGrad)" />
+    <rect x="135" y="-140" width="30" height="140" rx="4" fill="url(#barGrad)" />
+    <rect x="180" y="-90" width="30" height="90" rx="4" fill="url(#barGrad)" />
+  </g>
+
+  <!-- weather droplet icon -->
+  <g transform="translate(520,270)">
+    <path d="M0 0 C 20 25, 20 55, 0 55 C -20 55, -20 25, 0 0 Z" fill="#5cb3ff" opacity="0.85" />
+  </g>
+
+  <text x="40" y="60" font-family="Geist, sans-serif" font-size="34" font-weight="600" fill="#eae5ec">
+    Agro Analytica
+  </text>
+  <text x="40" y="90" font-family="Geist, sans-serif" font-size="16" fill="#c2a4ff">
+    ML • Streamlit • Flask • Gemini AI • Weather &amp; Market APIs
+  </text>
+</svg>
